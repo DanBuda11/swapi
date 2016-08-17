@@ -2,12 +2,13 @@
 import './../styles/main.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Test from './api-test.js';
 
 // import a module from another file.
-import tiy from './app.js';
+// import tiy from './app.js';
 
 // Looks like the imported module was a function, because here we're executing it!
-tiy();
+// tiy();
 
 const TestComponent = React.createClass({
 	render: function() {
@@ -15,4 +16,9 @@ const TestComponent = React.createClass({
 	}
 });
 
-ReactDOM.render(<TestComponent />, document.querySelector('main'));
+ReactDOM.render(<Test />, document.querySelector('main'));
+
+
+// Starter notes:
+	// Use Backbone for models/collections
+	// May need to 'require' React
