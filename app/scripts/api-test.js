@@ -29,6 +29,7 @@ export default React.createClass({
 		this.setState({person: updatedPerson});
 	},
 	render: function() {
+		console.log(this.state.person.get('species'));
 		return (
 			<div>
 				<h3>Planet Info Request</h3>
@@ -46,6 +47,7 @@ export default React.createClass({
 				<p>{this.state.person.get('name')}</p>
 				<p>{this.state.person.get('homeworld')}</p>
 				<p>{this.state.person.get('gender')}</p>
+				<p>{this.state.person.get('species')}</p>
 			</div>
 		);
 	}

@@ -6,7 +6,8 @@ export default Backbone.Model.extend({
 		eye_color: '',
 		gender: '',
 		homeworld: '',
-		name: ''
+		name: '',
+		species: []
 	},
 	idAttribute: 'id',
 	url: function() {
