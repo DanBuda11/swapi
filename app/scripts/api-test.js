@@ -29,7 +29,15 @@ export default React.createClass({
 		this.setState({person: updatedPerson});
 	},
 	render: function() {
-		console.log(this.state.person.get('species'));
+		console.log('species', this.state.person.get('species'));
+		const rootUrl = 'http://swapi.co/api/';
+		console.log('should return the species url:', this.state.person.get('species')[0]);
+		let speciesUrl = this.state.person.get('species')[0];
+		console.log(speciesUrl);
+		// let speciesId = speciesUrl.length;
+		// console.log('length: ', speciesId);
+		// let speciesId = speciesUrl.substr(speciesUrl.length - 1);
+		// console.log('speciesId: ', speciesId);
 		return (
 			<div>
 				<h3>Planet Info Request</h3>
@@ -47,7 +55,7 @@ export default React.createClass({
 				<p>{this.state.person.get('name')}</p>
 				<p>{this.state.person.get('homeworld')}</p>
 				<p>{this.state.person.get('gender')}</p>
-				<p>{this.state.person.get('species')}</p>
+				<p>{this.state.person.get('species')[0]}</p>
 			</div>
 		);
 	}
