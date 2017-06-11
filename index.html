@@ -3,14 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>SWAPI Testing</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" type="text/css" href="dist/style.css">
   </head>
   <body>
-  	<div>
-  		<select id="planet-select">
+    <h1 class="main-title">Star Wars: May the API Be With You</h1>
+  	<div class="select-div">
+  		<select id="planet-select" placeholder="Select a planet">
+        <option disabled="disabled" selected="selected">Select a planet</option>
   		</select>
   	</div>
-  	<div id="data"></div>
+  	<div id="data">
+      <h3 class="planet-name"></h3>
+      <h5>Planet Statistics</h5>
+      <p class="planet-data planet-diameter"></p>
+      <p class="planet-data planet-gravity"></p>
+      <p class="planet-data planet-orbital-period"></p>
+      <p class="planet-data planet-rotation-period"></p>
+      <p class="planet-data planet-climate"></p>
+      <p class="planet-data planet-terrain"></p>
+      <p class="planet-data planet-surface-water"></p>
+      <p class="planet-data planet-population"></p>
+      
+      <!-- <p class="planet-data planet-films"></p>
+      <p class="planet-data planet-residents"></p> -->
+
+    </div>
   	<script src="dist/bundle.js"></script>
   </body>
 </html>
