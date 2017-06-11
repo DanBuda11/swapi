@@ -2,7 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const config = {
-	entry: './src/scripts/index.js',
+	entry: ['babel-polyfill', './src/index.js'],
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'bundle.js',
