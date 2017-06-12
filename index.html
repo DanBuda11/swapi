@@ -7,11 +7,27 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
   </head>
   <body>
+    <div id="space">      
+      <div class="stars"></div>
+      <div class="stars"></div>
+      <div class="stars"></div>
+      <div class="stars"></div>
+      <div class="stars"></div>
+    </div>
     <h1 class="main-title">Star Wars: May the API Be With You</h1>
   	<div class="select-div">
-  		<select id="planet-select" placeholder="Select a planet">
-        <option disabled="disabled" selected="selected">Select a planet</option>
+  		<select id="planet-select" class="selector">
+        <option disabled="disabled" selected="selected">Planets</option>
   		</select>
+      <select id="people-select" class="selector">
+        <option disabled="disabled" selected="selected">People</option>
+      </select>
+      <select id="starship-select" class="selector">
+        <option disabled="disabled" selected="selected">Starships</option>
+      </select>
+      <select id="vehicle-select" class="selector">
+        <option disabled="disabled" selected="selected">Vehicles</option>
+      </select>
   	</div>
   	<div id="data">
       <h3 class="planet-name"></h3>

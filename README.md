@@ -2,5 +2,4 @@
 
 Fun API to mess around with while I work on a little Async/Await stuff.
 
-Next to add:
-* Some kind of parallax star background
+Check out the progess at [http://swapi-danbuda.surge.sh/](http://swapi-danbuda.surge.sh/).
