@@ -1,4 +1,4 @@
-import './styles/main.css';
+import './styles/main.scss';
 import axios from 'axios';
 import _ from 'lodash';
 
@@ -8,13 +8,7 @@ const ROOT_URL = 'http://swapi.co/api';
 let allPlanets = [];
 
 planetSelect.addEventListener('change', () => {
-	// console.log(planetSelect.value);
-	console.log(allPlanets); // showing up as empty array - fixed now?
-
 	const key = _.findKey(allPlanets, { name: planetSelect.value });
-
-	// console.log('key: ', key);
-
 	const planetName = document.querySelector('.planet-name');
 	const diameter = document.querySelector('.planet-diameter');
 	const gravity = document.querySelector('.planet-gravity');
@@ -40,7 +34,6 @@ planetSelect.addEventListener('change', () => {
 
 const getPlanets = async (pages) => {
 	
-
 	try {
 		let planets = [];
 		
@@ -73,9 +66,6 @@ const sortPlanets = async (pages) => {
 };
 
 sortPlanets(7).then((status) => {
-	// console.log('status: ', status);
-	// allPlanets = status;
-	// console.log(allPlanets);
 	status.forEach((planet, i) => {
 		const option = document.createElement('option');
 		option.textContent = planet.name;

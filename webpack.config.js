@@ -1,36 +1,31 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const config = {
 	entry: ['babel-polyfill', './src/index.js'],
 	output: {
-		path: path.resolve(__dirname, 'dist'),
-		filename: 'bundle.js',
-		publicPath: 'dist/'
+		path: __dirname + '/dist',
+		filename: 'bundle.js'
 	},
 	module: {
 		rules: [
 			{
-				use: 'babel-loader',
-				test: /\.js$/
+				test: /\.js$/,
+				use: 'babel-loader'
 			},
 			{
-				use: ExtractTextPlugin.extract({
-					use: 'css-loader'
-				}),
-				test: /\.css$/
-			},
-			{
-				test: /\.(jpe?g|png|gif|svg)$/,
-				use: [
-					'file-loader',
-					'img-loader'
-				]
+				test: /\.scss$/,
+				use: ExtractTextPlugin.extract([
+					'css-loader',
+					'sass-loader'
+				])
 			}
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin('style.css')
+		new ExtractTextPlugin('main.css'),
+		new HtmlWebpackPlugin({template: 'index.html'})
 	]
 };
 
