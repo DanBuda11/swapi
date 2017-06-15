@@ -47,7 +47,7 @@ const getPlanets = async (pages) => {
 
 		return planets;
 	} catch (e) {
-			throw new Error('Request unsuccessul.');
+			throw new Error('Request unsuccessful.');
 	}
 };
 
