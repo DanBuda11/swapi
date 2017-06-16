@@ -2,111 +2,43 @@
 	font-family: sans-serif;
 }
 
-// Wrap the data boxes in a yellow border outside
-// of the black border so it looks like 2 borders.
-// So data box will be white with black border
-// and then yellow border around that.
+// Need to pull in png files from background url locally
 
-body {
-	background-color: #000;
+// Starry background thanks to Nick Mkrtchyan - https://codepen.io/WebSonick/pen/vjmgu
+* {
+    margin: 0;
+    padding: 0;
 }
 
-// Alt starry background:
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
 
-// * {
-//     margin: 0;
-//     padding: 0;
-// }
-
-// @keyframes move-twink-back {
-//     from {background-position:0 0;}
-//     to {background-position:-10000px 5000px;}
-// }
-
-// .stars, .twinkling {
-//   position:absolute;
-//   top:0;
-//   left:0;
-//   right:0;
-//   bottom:0;
-//   width:100%;
-//   height:100%;
-//   display:block;
-// }
-
-// .stars {
-//   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-//   z-index:0;
-// }
-
-// .twinkling{
-//   background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-//   z-index:1;
-
-//   animation:move-twink-back 200s linear infinite;
-// }
-
-#space, .stars {
-	overflow: hidden;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: -1;
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
 }
 
 .stars {
-	background-image: 
-    radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 50px 160px, #ddd, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0)),
-    radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
-  background-repeat: repeat;
-  background-size: 200px 200px;
-  animation: zoom 5s infinite;
-  opacity: 0;
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:-2;
 }
 
-.stars:nth-child(1) {
-  background-position: 50% 50%;
-  animation-delay: 0s;
-}
-.stars:nth-child(2) {
-  background-position: 20% 60%;
-  animation-delay: 1s;
-}
-.stars:nth-child(3) {
-  background-position: -20% -30%;
-  animation-delay: 2s;
-}
-.stars:nth-child(4) {
-  background-position: 40% -80%;
-  animation-delay: 3s;
-}
-.stars:nth-child(5) {
-  background-position: -20% 30%;
-  animation-delay: 4s;
-}
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index: -1;
 
-@keyframes zoom {
-  0% {
-    opacity: 0;
-    transform: scale(0.5);
-    animation-timing-function: ease-in;
-  } 
-  85% {
-    opacity: 1;
-    transform: scale(2.8);
-    animation-timing-function: linear;
-  }
-  100% {
-    opacity: 0;
-    transform: scale(3.5);
-  }
+  animation:move-twink-back 200s linear infinite;
 }
+// 	End starry background
+
 
 .main-title {
 	text-align: center;
@@ -120,7 +52,7 @@ body {
 
 .select-div {
 	text-align: center;
-	padding: 0.2em;
+	padding-bottom: 1em;
 
 	.selector {
 		font-size: 1.1em;
@@ -135,12 +67,14 @@ body {
 
 #data {
 	display: none;
-	width: 90%;
+	width: 82%;
 	margin: 0 auto;
 	background-color: #fff;
-	border: 1px solid #000;
+	border: 3px solid #000;
+	box-shadow: 0px 0px 0px 6px rgba(255, 215, 0, 1);
 	border-radius: 1em;
 	max-width: 600px;
+	padding-bottom: 1em;
 
 	h3 {
 		text-align: center;
@@ -156,15 +90,23 @@ body {
 
 	.planet-data {
 		text-align: center;
+		margin-bottom: 0.5em;
 	}
 }
 
 #footer {
 	text-align: center;
 	color: #fff;
+	display: flex;
+	justify-content: center;
 
-	a {
-		text-decoration: none;
-		color: #fff;
+	.footer-inside {
+		position: absolute;
+		bottom: 50px;
+
+		a {
+			text-decoration: none;
+			color: #fff;
+		}
 	}
 }
