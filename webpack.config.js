@@ -21,6 +21,10 @@ const config = {
 					'css-loader',
 					'sass-loader'
 				])
+			},
+			{
+				test: /\.png$/,
+				use: 'file-loader'
 			}
 		]
 	},
