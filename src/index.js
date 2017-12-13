@@ -4,7 +4,7 @@ import _ from 'lodash';
 
 const planetSelect = document.getElementById('planet-select');
 const dataDiv = document.getElementById('data');
-const ROOT_URL = 'http://swapi.co/api';
+const ROOT_URL = 'https://swapi.co/api';
 let allPlanets = [];
 
 planetSelect.addEventListener('change', () => {
