@@ -4,4 +4,4 @@
 
 Fun API to mess around with while I work on a little Async/Await stuff.
 
-Check out the progess at [http://swapi-danbuda.surge.sh/](http://swapi-danbuda.surge.sh/).
+Check out the progess at [https://swapi-danbuda.netlify.com/](https://swapi-danbuda.netlify.com/).
