@@ -1,6 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config = {
 	entry: ['babel-polyfill', './src/index.js'],
@@ -30,7 +31,14 @@ const config = {
 	},
 	plugins: [
 		new ExtractTextPlugin('main.css'),
-		new HtmlWebpackPlugin({template: 'index.html'})
+		new HtmlWebpackPlugin({template: 'index.html'}),
+		new CopyWebpackPlugin([
+      {
+        from: './*',
+        test: /\.(png|xml|ico|svg|webmanifest)$/,
+        ignore: ['swapi.png', '*.json', '*.js', '*.md', '*.html', '.gitignore', '.babelrc'],
+      },
+    ]),
 	]
 };
 

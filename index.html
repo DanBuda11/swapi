@@ -1,19 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/apple-touch-icon.png?v=xQdLKRbB0N"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon-32x32.png?v=xQdLKRbB0N"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon-16x16.png?v=xQdLKRbB0N"
+    />
+    <link rel="manifest" href="/site.webmanifest?v=xQdLKRbB0N" />
+    <link
+      rel="mask-icon"
+      href="/safari-pinned-tab.svg?v=xQdLKRbB0N"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="/favicon.ico?v=xQdLKRbB0N" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#000000" />
     <title>Star Wars API Fun</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
   </head>
   <body>
     <div class="stars"></div>
     <div class="twinkling"></div>
     <h1 class="main-title">Star Wars: May the API Be With You</h1>
-  	<div class="select-div">
-  		<select id="planet-select" class="selector">
+    <div class="select-div">
+      <select id="planet-select" class="selector">
         <option disabled="disabled" selected="selected">Planets</option>
-  		</select>
+      </select>
       <select id="people-select" class="selector">
         <option disabled="disabled" selected="selected">People</option>
       </select>
@@ -23,8 +53,8 @@
       <select id="vehicle-select" class="selector">
         <option disabled="disabled" selected="selected">Vehicles</option>
       </select>
-  	</div>
-  	<div id="data">
+    </div>
+    <div id="data">
       <h3 class="planet-name"></h3>
       <h5>Planet Statistics</h5>
       <p class="planet-data planet-diameter"></p>
@@ -35,14 +65,16 @@
       <p class="planet-data planet-terrain"></p>
       <p class="planet-data planet-surface-water"></p>
       <p class="planet-data planet-population"></p>
-      
+
       <!-- <p class="planet-data planet-films"></p>
       <p class="planet-data planet-residents"></p> -->
-
     </div>
     <div id="footer">
       <div class="footer-inside">
-       <p>Made with the Star Wars API - <a href="https://swapi.co/">https://swapi.co/</a></p>
+        <p>
+          Made with the Star Wars API -
+          <a href="https://swapi.co/">https://swapi.co/</a>
+        </p>
       </div>
     </div>
   </body>
